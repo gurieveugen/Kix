@@ -1,0 +1,33 @@
+.header-button{
+	padding:21px 0 28px;
+}
+.btn-login{
+	padding:6px 15px 6px 40px;
+	font:bold 14px/18px Arial, Helvetica, sans-serif;
+}
+nav{
+	margin:0 -10px 0 0;
+	font:14px/16px Arial, Helvetica, sans-serif;
+}
+#nav>li{
+	padding: 0 10px 10px;
+}
+#nav> li:first-child{
+	padding:0 10px 10px 0;
+}
+.aside-form{
+	margin:-51px 2px -72px -27px;
+	padding:44px 20px 51px 40px;
+	font:18px/21px Arial, Helvetica, sans-serif;
+}
+.aside-form .text h4{
+	font:bold 18px/20px Arial, Helvetica, sans-serif;
+	letter-spacing: -1.5px;
+}
+.aside-form .text h4 strong{
+	font:bold 22px/26px Arial, Helvetica, sans-serif;
+}
+.register-form input[type="submit"]{
+	padding:8px 30px;
+	font:bold 18px/20px Arial, Helvetica, sans-serif;
+}

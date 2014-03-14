@@ -1,0 +1,39 @@
+<?php
+/*
+ * @package WordPress
+ * Template Name: Landing Page
+*/
+?>
+<?php get_header('inner'); ?>
+
+<div id="main" class="landing">
+	<div class="center-wrap cf">
+		<div class="slider-landing">
+			<ul class="slides cf">
+				<li class="active"><img src="<?php echo TDU; ?>/images/img-1-1.jpg" alt="image description"></li>
+				<li><img src="<?php echo TDU; ?>/images/img-2-1.jpg" alt="image description"></li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			jQuery(function(){
+				jQuery('.slider-landing').flexslider({
+					selector: ".slides > li",
+					animation: "slide",
+					slideshowSpeed: 7000,
+					animationSpeed: 600,
+					controlNav: false,
+					directionNav: false
+				});
+			});
+		</script>
+		<aside class="aside-form">
+			<div class="text">
+                <?php while ( have_posts() ) : the_post(); ?>
+                    <?php the_content(); ?>				
+                <?php endwhile; ?>
+			</div>
+            <?php echo do_shortcode('[contact-form-7 id="68" title="Contact Form"]'); ?>			
+		</aside>
+	</div>
+</div>
+<?php get_footer('inner'); ?>

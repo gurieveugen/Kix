@@ -1,0 +1,158 @@
+.pc-hide{
+	display:block;
+}
+.pc-visible{
+	display:none;
+}
+.tablet-hide{
+	display:none;
+}
+.tablet-visible{
+	display:block;
+}
+.mobile-hide{
+	display:block;
+}
+.mobile-visible{
+	display:none;
+}
+#wrapper{
+	padding:0 15px;
+}
+#header{
+	margin:0 -15px;
+	padding:10px 15px 14px;
+}
+#header nav{
+	clear:both;
+	padding:30px 0 0;
+	font-size:12px;
+}
+.slider{
+	margin:0 -15px;
+}
+.slides .center-wrap{
+	padding:0 10px;
+}
+.four-columns{
+	margin:0;
+}
+.section{
+	margin:0 -15px;
+	padding:25px 30px 37px;
+}
+.section .image{
+	max-width: 100%;
+}
+.three-box{
+	font-size: 12px;
+	line-height:14px;
+}
+.three-box .box{
+	padding:10px 15px 10px;
+	min-height: 240px;
+}
+.three-box .box .title{
+	font-size:25px;
+	line-height: 27px;
+}
+#footer{
+	margin:0 -15px;
+	font-size:13px;
+	line-height: 18px;
+}
+.footer-area,
+.footer-bottom{
+	padding:14px 15px;
+}
+#footer h4{
+	font-size:18px;
+}
+.twit-blocks .time{
+	float:left;
+}
+.footer-area .phone{
+	font-size:15px;
+}
+.socials{
+	text-align:center;
+	margin:0;
+}
+.socials li{
+	padding:0 8px 10px 0;
+}
+.footer-area .column,
+.footer-area .column.col-2,
+.footer-area .column.col-3{
+	width:22%;
+	margin:0 0 2% 2%;
+}
+.footer-area .column:first-child{
+	margin-left:0;
+}
+.footer-area .column.col-form{
+	width:60%;
+}
+.form-subscribe input[type="submit"]{
+	width:100%;
+	display:block;
+}
+.slider-tabs{
+	margin:0 -15px;
+	height:646px;
+}
+#main{
+	margin:0 -15px;
+	padding:30px 15px;
+}
+.blue-box .text-center{
+	padding:0 10px;
+}
+.visual{
+	margin:0 -15px;
+}
+.visual .center-wrap{
+	padding:0 15px;
+}
+.form-app{
+	width:95%;
+}
+#main.landing{
+	margin:20px -15px 0;
+	padding:30px 0 0;
+}
+.slider-landing{
+	float:none;
+	margin:0 auto 30px;
+	-webkit-border-radius:9px;
+	border-radius:9px;
+}
+.slider-landing li{
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+.aside-form{
+	padding:10px;
+	margin:0;
+	background:#009ddc;
+	width:100%;
+	float:none;
+	width:678px;
+	margin:0 auto 20px;
+}
+.aside-form form{
+	width:475px;
+	margin:0 auto;
+}
+#main.shop .aside-form{
+	background:#00913f;
+	width:100%;
+	padding:10px;
+	margin:0;
+}
+#footer.inner{
+	text-align:center;
+}
+.image-holder{
+	margin:0 -15px;
+}

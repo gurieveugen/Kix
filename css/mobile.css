@@ -1,0 +1,305 @@
+.pc-hide{
+	display:block;
+}
+.pc-visible{
+	display:none;
+}
+.tablet-hide{
+	display:block;
+}
+.tablet-visible{
+	display:none;
+}
+.mobile-hide{
+	display:none;
+}
+.mobile-visible{
+	display:block;
+}
+#wrapper{
+	padding:0 10px;
+}
+#header{
+	padding:10px 10px;
+	margin:0 -10px;
+}
+.header-button{
+	padding:21px 10px 21px 0;
+}
+.logo{
+	width:130px;
+}
+.btn-login{
+	display:inline-block;
+	background:url(../images/ico-login-blue.png) no-repeat;
+	height:33px;
+	width:25px;
+	padding:0;
+	text-indent:-9999px;
+	overflow:hidden;
+	text-align:left;
+}
+#header nav{
+	padding:0 10px;
+	float:none;
+	margin:0 -10px;
+	overflow:hidden;
+	background:#555;
+	display:none;
+}
+.btn-nav-m{
+	background:url(../images/bg-nav-mobile.png) no-repeat;
+	width:25px;
+	height:25px;
+	display:inline-block;
+	vertical-align:middle;
+	margin:0 20px 0 0;
+	cursor:pointer;
+}
+#nav{
+	float:none;
+}
+#nav > li{
+	float:none;
+	padding:0;
+	border-top:1px solid #aaa;
+}
+#nav > li:first-child{
+	padding:0;
+	border:none;
+}
+#nav li a{
+	display:block;
+	padding:10px 10px;
+	color:#fff;
+	position:relative;
+}
+#nav li i{
+	display:none;
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	width:40px;
+	background:url(../images/arrows-nav.png) no-repeat 0 50%;
+}
+#nav li i:hover{
+	background-position:-40px 50%;
+}
+#nav > li:before{
+	background:none;
+	padding:0;
+}
+#nav .menu-item-has-children i{
+	display:block;
+}
+#nav li ul{
+	display:none;
+	background:url(../images/devider-sub-nav.png) repeat-x;
+	margin:0;
+	padding:0;
+	width:100%;
+	border:none;
+	-webkit-border-radius:0;
+	border-radius:0;
+	position:relative;
+	left:auto;
+	right:auto;
+	top:auto;
+}
+#nav li:hover ul{
+	display:none;
+}
+#nav li.open ul{
+	display:block;
+}
+#nav ul li{
+	padding:0 0 0 30px;
+}
+#nav li.active ul li a,
+#nav li:hover ul li a,
+#nav li ul li a{
+	color:#fff;
+}
+#nav li:hover ul li a:hover,
+#nav li ul li:hover a{
+	color:#009DDC;
+}
+#nav li ul:after{
+	background:none;
+}
+.slider{
+	height:254px;
+	margin:0 -10px;
+}
+.slider-tabs{
+	margin:0 -10px;
+	height:553px;
+}
+.slider .slide{
+	height:250px;
+}
+.slider-tabs .slides{
+	height:282px;
+}
+.slides .text h3{
+	font-size:18px;
+	line-height: 20px;
+	padding:3px 5px 5px;
+}
+.slider-tabs .slide .text,
+.slider .slide .text{
+	padding:0 5px;
+	width:100%;
+	font-size:12px;
+	line-height: 14px;
+}
+.slides .text p{
+	background:url(../images/transparent-gray.png);
+	padding:2px 5px 2px 5px;
+}
+.slides .text .row{
+	background:none;
+	margin:0;
+	padding:0;
+	float:none;
+}
+.slider-tabs .slide{
+	height:282px;
+}
+.slider-tabs .slides .text{
+	width:100%;
+}
+.section {
+	margin:0 -10px;
+	padding:25px 10px;
+}
+.section.s1{
+	padding:35px 10px;
+}
+.section .text{
+	padding:0 0 25px;
+}
+.four-columns .column{
+	width:100%;
+	padding:0 0 40px;
+}
+.three-box{
+	margin:0;
+}
+.three-box .box{
+	width:100%;
+	margin:0 0 10px;
+	min-height: 200px;
+}
+#footer{
+	margin:0 -15px;
+	padding:0 15px;
+}
+#wrapper.shop #footer.inner{
+	padding:30px 15px;
+}
+.footer-area,
+.footer-bottom{
+	padding:14px 15px;
+	
+}
+.footer-area .column.col-2,
+.footer-area .column.col-3,
+.footer-area .column{
+	width:100%;
+	padding:0 10px;
+	text-align:center;
+	margin:0 0 2%;
+}
+.footer-area .column.col-form{
+	width:100%;
+}
+.twit-blocks .time{
+	float:right;
+}
+.footer-area .phone{
+	display:inline-block;
+}
+.twit-blocks{
+	text-align:left;
+}
+.blog-blocks{
+	text-align:left;
+}
+.two-columns .column{
+	float:none;
+	width:100%;
+}
+.slider-tabs .blue-box{
+	padding:10px 0;
+	margin:0;
+	font-size:12px;
+	line-height: 16px;
+}
+.tab-links{padding:0;}
+.tab-link{
+	display:block;
+	margin:0 0 5px;
+}
+.tab-link:first-child{margin:0 0 5px;}
+.tab-link:before{
+	background:none;
+}
+#main{
+	margin:0 -10px;
+	padding:10px 20px;
+}
+.visual{
+	height:300px;
+	margin:0 -10px;
+}
+.visual .text{
+	width:100%;
+	line-height: 17px;
+}
+.visual h3{
+	font-size: 24px;
+	line-height: 26px;
+	margin:0 0 10px;
+}
+.visual .btn-blue{
+	font-size:14px;
+}
+.slider-landing{
+	height:auto;
+	width:auto;
+}
+.slider-landing li{
+	height:auto;
+}
+.form-app .column{
+	margin:0;
+}
+.form-app input[type="submit"]{
+	display:block;
+	width:100%;
+	padding:6px 0;
+	text-align:center;
+	font-size:22px;
+}
+.aside-form{
+	width:100%;
+}
+#footer.inner .copy{
+	margin:0 0 10px;
+}
+#footer.inner .bottom-text li:first-child a:before{
+	content:' ';
+	padding:0;
+}
+#main.landing{
+	margin:20px -10px 0;
+	padding:20px 10px;
+}
+.aside-form form{
+	width:100%;
+}
+.image-block{
+	height:130px;
+}
