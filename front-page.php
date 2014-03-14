@@ -8,53 +8,33 @@
 <?php get_header(); ?>
 
 
+<?php 
+$items = $GLOBALS['slider']->getItems(); 
 
+?>
 <section class="slider">
 	<div class="slides cf">
-		<div class="slide active" style="background-image: url(<?php echo TDU; ?>/images/img-1.jpg);">
-			<div class="center-wrap">
-				<div class="text cf">
-					<div class="holder">
-						<h3>About AppKIX</h3>
-						<p><span class="row">A powerful end to end mobile marketing platform connecting your business</span><span class="row">to your customers using iBeacons and proximity smartphone marketing.</span></p>
-						<a href="#" class="btn-blue">Learn More</a>
+		<?php
+		foreach ($items as $key => $value) 
+		{
+			if($value->images)
+			{
+				?>
+				<div class="slide active" style="background-image: url(<?php echo $value->images['full']; ?>);">
+					<div class="center-wrap">
+						<div class="text cf">
+							<div class="holder">
+								<h3><?php echo $value->post_title; ?></h3>
+								<p><?php echo $value->post_content; ?></p>
+								<a href="<?php echo $value->meta['learn_more']; ?>" class="btn-blue">Learn More</a>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="slide" style="background-image: url(<?php echo TDU; ?>/images/img-2.jpg);">
-			<div class="center-wrap">
-				<div class="text cf">
-					<div class="holder">
-						<h3>Track - Target - Capture</h3>
-						<p><span class="row">Deliver the right message to the right customer at the right time. Deliver</span><span class="row">content to any smartphone using iBeacons and location based marketing.</span></p>
-						<a href="#" class="btn-blue">Learn More</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slide" style="background-image: url(<?php echo TDU; ?>/images/img-3.jpg);">
-			<div class="center-wrap">
-				<div class="text cf">
-					<div class="holder">
-						<h3>Powerful Insights</h3>
-						<p><span class="row">Launch campaigns with the ability to optimise in real time.</span><span class="row">Get deep analytical insights such as traffic flows, dwell times,</span><span class="row">number of visits and even competitor visits.</span></p>
-						<a href="#" class="btn-blue">Learn More</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slide" style="background-image: url(<?php echo TDU; ?>/images/img-4.jpg);">
-			<div class="center-wrap">
-				<div class="text cf">
-					<div class="holder">
-						<h3>iBeacon Technology</h3>
-						<p><span class="row">Place our small wireless iBeacons anywhere to deliver personalised content</span> <span class="row">to customers as they walk in the door and move around your venue.</span></p>
-						<a href="#" class="btn-blue">Learn More</a>
-					</div>
-				</div>
-			</div>
-		</div>
+				<?php	
+			}
+		}
+		?>
 	</div>
 </section>
 <script type="text/javascript">

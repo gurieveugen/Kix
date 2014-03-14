@@ -7,23 +7,12 @@
 		<footer id="footer">
 			<div class="center-wrap-1300">
 				<div class="footer-area">
-					<div class="column">
-						<h4>Contact Details</h4>
-						<div class="contact-block">
-							<address>Street name street name street name street name, Zip Code, City Name</address>
-							<span class="tel">+11 - 222 - 333 - 4444</span>
-							<a href="mailto:info@appkix.com" class="mail">info@appkix.com</a>
-							<ul class="socials">
-								<li class="facebook"><a href="#">facebook</a></li>
-								<li class="twitter"><a href="#">twitter</a></li>
-								<li class="linkedin"><a href="#">linkedin</a></li>
-								<li class="pinterest"><a href="#">pinterest</a></li>
-								<li class="rss"><a href="#">rss</a></li>
-								<li class="youtube"><a href="#">youtube</a></li>
-							</ul>
-							<p>2ergo Limited proud to be ISO27001 and ISO9001 certified</p>
-						</div>
-					</div>
+					<?php
+					if(is_active_sidebar('footer-sidebar'))
+					{
+						dynamic_sidebar('footer-sidebar');
+					}
+					?>					
 					<div class="column col-2">
 						<h4>Twitter Feed</h4>
 						<ul class="twit-blocks">

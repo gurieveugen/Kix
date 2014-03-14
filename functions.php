@@ -3,47 +3,88 @@
  * @package WordPress
  * @subpackage Base_Theme
  */
-
+// =========================================================
+// REQUIRE
+// =========================================================
+require_once 'includes/post_type_slider.php';
+require_once 'includes/widget_content_details.php';
+require_once 'includes/widget_twitter_feed.php';
+// =========================================================
+// CONSTANTS
+// =========================================================
 define('TDU', get_bloginfo('template_url'));
-
+// =========================================================
+// HOOKS
+// =========================================================
 add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
-add_filter( 'use_default_gallery_style', '__return_false' );
-
-register_sidebar(array(
-	'id' => 'right-sidebar',
-	'name' => 'Right Sidebar',
-	'before_widget' => '<div class="widget %2$s" id="%1$s">',
-	'after_widget' => '</div>',
-	'before_title' => '<h3>',
-	'after_title' => '</h3>'
-));
-
 add_theme_support( 'post-thumbnails' );
+add_filter( 'use_default_gallery_style', '__return_false' );
+add_filter('nav_menu_css_class', 'change_menu_classes');
+add_filter('the_content', 'filter_template_url');
+add_filter('get_the_content', 'filter_template_url');
+add_filter('widget_text', 'filter_template_url');
+add_filter('the_content', 'template_url');
+add_filter('get_the_content', 'template_url');
+add_filter('widget_text', 'template_url');
+add_action('wp_enqueue_scripts', 'scripts_method');
 set_post_thumbnail_size( 604, 270, true );
 add_image_size( 'single-post-thumbnail', 400, 9999, false );
 
+// =========================================================
+// REGISTER SIDEBARS AND MENUS
+// =========================================================
+register_sidebar(array(
+	'id'            => 'right-sidebar',
+	'name'          => 'Right Sidebar',
+	'before_widget' => '<div class="widget %2$s" id="%1$s">',
+	'after_widget'  => '</div>',
+	'before_title'  => '<h3>',
+	'after_title'   => '</h3>'
+));
+
+register_sidebar(array(
+	'id'            => 'footer-sidebar',
+	'name'          => 'Footer Sidebar',
+	'before_widget' => '<div class="column %s" id="%1$s">',
+	'after_widget'  => '</div>',
+	'before_title'  => '<h4>',
+	'after_title'   => '</h4>'
+));
+
 register_nav_menus( array(
 	'primary_nav' => __( 'Primary Navigation', 'theme' ),
-	'top_nav' => __( 'Top Navigation', 'theme' ),
-	'bottom_nav' => __( 'Bottom Navigation', 'theme' )
+	'top_nav'     => __( 'Top Navigation', 'theme' ),
+	'bottom_nav'  => __( 'Bottom Navigation', 'theme' )
 ) );
 
-function change_menu_classes($css_classes){
+// =========================================================
+// Just for admin panel
+// =========================================================
+if(is_admin())
+{
+	wp_enqueue_style('admin-styles', TDU.'/css/admin-styles.min.css');
+	wp_enqueue_style('font-awesome', TDU.'/css/font-awesome.min.css');
+}
+
+// =========================================================
+// METHODS
+// =========================================================
+
+/**
+ * Custom active menu classes
+ * @param  string $css_classes 
+ * @return string              
+ */
+function change_menu_classes($css_classes)
+{
 	$css_classes = str_replace("current-menu-item", "current-menu-item active", $css_classes);
 	$css_classes = str_replace("current-menu-parent", "current-menu-parent active", $css_classes);
 	return $css_classes;
 }
-add_filter('nav_menu_css_class', 'change_menu_classes');
 
-function filter_template_url($text) {
-	return str_replace('[template-url]',get_bloginfo('template_url'), $text);
-}
-add_filter('the_content', 'filter_template_url');
-add_filter('get_the_content', 'filter_template_url');
-add_filter('widget_text', 'filter_template_url');
-
-function theme_paging_nav() {
+function theme_paging_nav() 
+{
 	global $wp_query;
 
 	// Don't print empty markup if there's only one page.
@@ -105,7 +146,8 @@ function theme_entry_date( $echo = true ) {
 
 	return $date;
 }
-function theme_entry_meta() {
+function theme_entry_meta() 
+{
 	if ( is_sticky() && is_home() && ! is_paged() )
 		echo '<span class="featured-post">' . __( 'Sticky', 'theme' ) . '</span>';
 
@@ -133,18 +175,34 @@ function theme_entry_meta() {
 		);
 	}
 }
-function scripts_method() {
+
+/**
+ * Register the needed version JQUERY
+ */
+function scripts_method() 
+{
 	wp_deregister_script( 'jquery' );
 	wp_register_script( 'jquery', TDU.'/js/jquery-1.11.0.min.js');
 	wp_enqueue_script( 'jquery' );
 }
-add_action('wp_enqueue_scripts', 'scripts_method');
 
-// register tag [template-url]
-function template_url($text) {
+
+/**
+ * register tag [template-url]
+ * @param  string $text 
+ * @return string
+ */
+function template_url($text) 
+{
 	return str_replace('[template-url]',get_bloginfo('template_url'), $text);
 }
-add_filter('the_content', 'template_url');
-add_filter('get_the_content', 'template_url');
-add_filter('widget_text', 'template_url');
 
+/**
+ * register tag [template-url]
+ * @param  string $text 
+ * @return string
+ */
+function filter_template_url($text) 
+{
+	return str_replace('[template-url]',get_bloginfo('template_url'), $text);
+}
