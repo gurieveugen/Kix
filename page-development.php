@@ -24,6 +24,7 @@
 	<div class="center-wrap">
 		<h1>Get In Touch</h1>
 		<div class="form-app">
+			<?php //echo do_shortcode('[contact-form-7 id="96" title="Untitled"]'); ?>
 			<div class="two-columns">
 				<div class="column">
 					<label>Username*</label>
@@ -52,7 +53,7 @@
 			</div>
 			<label>Tell Us About Your App idea*</label>
 			<textarea placeholder="Write details here"></textarea>
-			<input type="submit" value="Submit Your App">
+			<input type="submit" value="Submit Your App"> 
 		</div>
 	</div>
 </section>

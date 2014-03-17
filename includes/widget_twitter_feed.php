@@ -38,21 +38,23 @@ class TwitterFeed extends WP_Widget {
 
 		$title    = isset($instance['title']) ? $instance['title'] : '';
 		$username = isset($instance['username']) ? $instance['username'] : '';
-		$count    = isset($instance['count']) ? $instance['count'] : 0;		
-
+		$count    = isset($instance['count']) ? $instance['count'] : 0;
+		$before_widget = str_replace('column', 'column col-2', $before_widget);
+		
 		echo $before_widget;
 		if($title) echo $before_title.$title.$after_title;		
 		$connection = new TwitterOAuth(self::CONSUMER_KEY, self::CONSUMER_SECRET, self::ACCESS_TOKEN, self::ACCESS_TOKEN_SECRET);		 
-		$tweets = $connection->get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=".$username."&count=".$count);		 
-		//echo print_r($tweets);
+		$tweets     = $connection->get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=".$username."&count=".$count);		 
+		//var_dump($tweets);
 		echo '<ul class="twit-blocks">';
 		foreach ($tweets as $key => $value) 
 		{
+			$minutes_ago = intval((microtime(true) - strtotime($value->created_at)) / 60);
 			?>
 			<li class="block">
 				<div class="cf">
-					<a href="#" class="link">http://bit.ly/9m2iMT#</a>
-					<span class="time">9 min ago</span>
+					<a href="https://twitter.com/<?php echo $username; ?>/status/<?php echo $value->id_str; ?>" class="link">https://twitter.com/<?php echo $username; ?>/status/<?php echo $value->id_str; ?></a>
+					<span class="time"><?php echo $minutes_ago; ?> min ago</span>
 				</div>
 				<p><?php echo $value->text; ?></p>
 			</li>
@@ -68,7 +70,7 @@ class TwitterFeed extends WP_Widget {
 	 */
 	public function form($instance) 
 	{	
-		$title      = isset($instance['title']) ? $instance['title'] : '';	
+		$title    = isset($instance['title']) ? $instance['title'] : '';	
 		$username = isset($instance['username']) ? $instance['username'] : '';
 		$count    = isset($instance['count']) ? $instance['count'] : '';			
 

@@ -9,6 +9,7 @@
 require_once 'includes/post_type_slider.php';
 require_once 'includes/widget_content_details.php';
 require_once 'includes/widget_twitter_feed.php';
+require_once 'includes/widget_latest_posts.php';
 // =========================================================
 // CONSTANTS
 // =========================================================
@@ -16,10 +17,10 @@ define('TDU', get_bloginfo('template_url'));
 // =========================================================
 // HOOKS
 // =========================================================
-add_theme_support( 'automatic-feed-links' );
-add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
+add_theme_support( 'automatic-feed-links');
+add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list'));
 add_theme_support( 'post-thumbnails' );
-add_filter( 'use_default_gallery_style', '__return_false' );
+add_filter( 'use_default_gallery_style', '__return_false');
 add_filter('nav_menu_css_class', 'change_menu_classes');
 add_filter('the_content', 'filter_template_url');
 add_filter('get_the_content', 'filter_template_url');
@@ -27,6 +28,7 @@ add_filter('widget_text', 'filter_template_url');
 add_filter('the_content', 'template_url');
 add_filter('get_the_content', 'template_url');
 add_filter('widget_text', 'template_url');
+add_filter( 'wpcf7_form_class_attr', 'customFormClass');
 add_action('wp_enqueue_scripts', 'scripts_method');
 set_post_thumbnail_size( 604, 270, true );
 add_image_size( 'single-post-thumbnail', 400, 9999, false );
@@ -205,4 +207,15 @@ function template_url($text)
 function filter_template_url($text) 
 {
 	return str_replace('[template-url]',get_bloginfo('template_url'), $text);
+}
+
+/**
+ * Set custom class to "Contact Form 7"
+ * @param  string $class 
+ * @return string        
+ */
+function customFormClass($class) 
+{
+	$class .= ' form-subscribe';
+	return $class;
 }
