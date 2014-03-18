@@ -1116,11 +1116,15 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 }
 .twit-blocks .time{
 	float:right;
+	width:80px;
+	text-align:right;
 	font-size:12px;
 	line-height: 14px;
 }
 .twit-blocks .link{
 	float:left;
+	width:140px;
+	text-align:left;
 	font-size:12px;
 	line-height: 14px;
 }
@@ -1150,9 +1154,9 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 	height:40px;
 	background:url(images/sprite.png) no-repeat;
 }
-.form-subscribe{
+/*.form-subscribe{
 	padding:40px 0 0;
-}
+}*/
 .form-subscribe input[type="text"],
 .form-subscribe input[type="email"],
 .form-subscribe textarea{

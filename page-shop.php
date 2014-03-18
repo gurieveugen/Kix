@@ -32,7 +32,7 @@
                     <?php the_content(); ?>				
                 <?php endwhile; ?>
 			</div>
-            <?php echo do_shortcode('[contact-form-7 id="68" title="Contact Form"]'); ?>	
+            <?php echo do_shortcode('[contact-form-7 id="97" title="Lending"]'); ?>	
 		</aside>
 	</div>
 </div>

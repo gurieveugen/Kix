@@ -55,10 +55,10 @@ register_sidebar(array(
 ));
 
 register_nav_menus( array(
-	'primary_nav' => __( 'Primary Navigation', 'theme' ),
-	'top_nav'     => __( 'Top Navigation', 'theme' ),
-	'bottom_nav'  => __( 'Bottom Navigation', 'theme' )
-) );
+	'primary_nav' => __('Primary Navigation', 'theme'),
+	'top_nav'     => __('Top Navigation', 'theme'),
+	'bottom_nav'  => __('Bottom Navigation', 'theme'),
+	'bottom_lg'   => __('Bottom Navigation for Landing page', 'theme')));
 
 // =========================================================
 // Just for admin panel
