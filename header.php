@@ -50,7 +50,7 @@
 	<div id="wrapper">
 		<header id="header" class="cf">
 			<div class="center-wrap cf">
-				<a href="#" class="logo"><img src="<?php echo TDU; ?>/images/logo.png" alt="image description"></a>
+				<a href="<?php echo home_url('/'); ?>" class="logo"><img src="<?php echo TDU; ?>/images/logo.png" alt="<?php bloginfo('name'); ?>"></a>
 				<div class="header-button">
 					<span class="mobile-visible btn-nav-m"></span>
 					<a href="#" class="btn-login">Client Login</a>

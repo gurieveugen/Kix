@@ -682,7 +682,6 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 	border-radius:7px;
 	z-index:1000;
 	list-style:none;
-	font:14px/16px Arial, Helvetica, sans-serif;
 }
 #nav li:hover ul{
 	display:block;
@@ -703,11 +702,11 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 	background:url(images/devider-sub-nav.png) repeat-x 0 100%;
 }
 #nav li:hover ul li a{
-	color:#272727;
+	color:#555;
 	display:block;
 }
 #nav li:hover ul li a:hover{
-	color:#0b5013;
+	color:#009DDC;
 }
 .btn-blue{
 	background:#009ddc;
@@ -797,8 +796,8 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 .slides .text{
 	display:table;
 	height:100%;
-	width:510px;
-	font:14px/16px Arial, Helvetica, sans-serif;
+	width:530px;
+	font:14px/31px Arial, Helvetica, sans-serif;
 	color:#fff;
 }
 .slides .text .holder{
@@ -818,24 +817,26 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 	background:none;
 	color:#333;
 }
-.slides .text p{
+.slides .text .gray-text{
+	background:url(images/transparent-gray.png);
+	padding:0 15px 0 18px;
 	float:left;
 	clear:both;
 	margin:0 0 23px;
 }
-.slides .text .row{
-	background:url(images/transparent-gray.png);
-	padding:7px 15px 7px 18px;
-	margin:0 0 1px;
-	float:left;
-}
-.slides .text.text-transparent .row{
+.slides .text.text-transparent .gray-text{
 	color:#333;
 	background:none;
 }
 .slides .text .btn-blue{
 	float:left;
 	clear:both;
+}
+.slider-tabs .slides .btn-blue{
+	margin:0 auto;
+	float:none;
+	display:block;
+	width:155px;
 }
 .slides .text ul{
 	float:left;
@@ -886,7 +887,7 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	color:#fff;
-	font:16px/18px 'MyriadProBold', Arial, Helvetica, sans-serif;
+	font:14px/16px Arial, Helvetica, sans-serif;
 	text-transform:uppercase;
 }
 .tab-link:first-child{
@@ -1026,7 +1027,7 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 #footer{
 	margin:0 -10px;
 	background:#323232;
-	font:14px/20px 'MyriadPro', Arial, Helvetica, sans-serif;
+	font:13px/18px 'MyriadPro', Arial, Helvetica, sans-serif;
 	color:#fff;
 }
 #footer a{
@@ -1063,7 +1064,7 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 	margin-left:0.3%;
 }
 .footer-area h4{
-	font:20px/23px 'MyriadProBold', Arial, Helvetica, sans-serif;
+	font:18px/23px 'MyriadProBold', Arial, Helvetica, sans-serif;
 	color:#fff;
 	margin:0 0 10px;
 	text-transform:uppercase;
@@ -1327,9 +1328,9 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 	margin:0 auto 36px;
 	background:#009ddc;
 	border:none;
-	font:30px/33px 'MyriadProBold', Arial, Helvetica, sans-serif;
 	text-transform:uppercase;
-	padding:6px 47px;
+	font:18px/20px 'MyriadProBold', Arial, Helvetica, sans-serif;
+	padding:10px 19px;
 	color:#fff;
 	position:relative;
 	-webkit-border-radius:3px;

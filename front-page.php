@@ -12,7 +12,7 @@
 $items = $GLOBALS['slider']->getItems(); 
 
 ?>
-<section class="slider">
+<section id="about_appKIX" class="slider">
 	<div class="slides cf">
 		<?php
 		foreach ($items as $key => $value) 
@@ -25,7 +25,7 @@ $items = $GLOBALS['slider']->getItems();
 						<div class="text cf">
 							<div class="holder">
 								<h3><?php echo $value->post_title; ?></h3>
-								<p><?php echo $value->post_content; ?></p>
+								<p class="gray-text"><?php echo $value->post_content; ?></p>
 								<a href="<?php echo $value->meta['learn_more']; ?>" class="btn-blue">Learn More</a>
 							</div>
 						</div>
@@ -94,7 +94,7 @@ $items = $GLOBALS['slider']->getItems();
 		});
 	});
 </script>
-<section class="section s1 gray">
+<section id="why_use_appKIX" class="section s1 gray">
 	<div class="center-wrap">
 		<div class="text">
 			<h2>Why Use AppKIX?</h2>
@@ -132,7 +132,7 @@ $items = $GLOBALS['slider']->getItems();
 		</div>
 	</div>
 </section>
-<section class="section">
+<section id="how_it_works" class="section">
 	<div class="center-wrap">
 		<div class="text">
 			<h2>How Does AppKIX Work</h2>
@@ -170,7 +170,7 @@ $items = $GLOBALS['slider']->getItems();
 		</div>
 	</div>
 </section>
-<section class="section gray">
+<section id="indoor_LBA" class="section gray">
 	<div class="center-wrap">
 		<div class="text">
 			<h2>Indoor Location Based Mobile Marketing</h2>
@@ -181,7 +181,7 @@ $items = $GLOBALS['slider']->getItems();
 		</div>
 	</div>
 </section>
-<section class="section">
+<section id="outdoor_LBA" class="section">
 	<div class="center-wrap">
 		<div class="text">
 			<h2>Outdoor Location Based Mobile Marketing</h2>
@@ -194,7 +194,7 @@ $items = $GLOBALS['slider']->getItems();
 		</div>
 	</div>
 </section>
-<section class="section gray">
+<section id="data_insights" class="section gray">
 	<div class="center-wrap">
 		<div class="text">
 			<h2>Powerful Data Insights</h2>

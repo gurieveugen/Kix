@@ -11,11 +11,10 @@
 	<div class="blue-box">
 		<div class="center-wrap">
 			<div class="text-center">
-				<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt.</p>
 				<div class="tab-links">
-					<a href="#" class="tab-link">Shopping Malls</a>
-					<a href="#" class="tab-link">Retailers</a>
-					<a href="#" class="tab-link">Venues</a>
+					<a href="#" class="tab-link slide-1">Shopping Centres</a>
+					<a href="#" class="tab-link slide-2">Retailers</a>
+					<a href="#" class="tab-link slide-3">Venues</a>
 				</div>
 			</div>
 		</div>
@@ -37,7 +36,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="slide" style="background-image: url(<?php echo TDU; ?>/images/img-9.jpg);">
+		<div class="slide" style="background-image: url(<?php echo TDU; ?>/images/img-9-1.jpg);">
 			<div class="center-wrap">
 				<div class="text text-transparent cf">
 					<div class="holder">
@@ -82,6 +81,18 @@
 			pagerAnchorBuilder: function(idx, slide) { 
 				return '.tab-links a:eq(' + idx + ')'; 
 			}
+		});
+		jQuery('#nav .slide-shopping-centres > a').click(function() {
+			jQuery('.slider-tabs .tab-links .slide-1').trigger('click');
+			return false;
+		});
+		jQuery('#nav .slide-retailers > a').click(function() {
+			jQuery('.slider-tabs .tab-links .slide-2').trigger('click');
+			return false;
+		});
+		jQuery('#nav .slide-venues > a').click(function() {
+			jQuery('.slider-tabs .tab-links .slide-3').trigger('click');
+			return false;
 		});
 	});
 </script>
