@@ -72,12 +72,16 @@
 </div>
 <script type="text/javascript">
 	jQuery(function(){
+		var start_index = parseInt(location.hash.replace('#', ''));
+		if(isNaN(start_index)) start_index = 0;
+		
 		jQuery('.slider-tabs .slides').cycle({ 
 			fx:      'fade', 
 			speed:    700, 
 			timeout:  0,
 			activePagerClass: 'active',
 			pager:  '.tab-links',
+			startingSlide: start_index,
 			pagerAnchorBuilder: function(idx, slide) { 
 				return '.tab-links a:eq(' + idx + ')'; 
 			}
@@ -94,6 +98,7 @@
 			jQuery('.slider-tabs .tab-links .slide-3').trigger('click');
 			return false;
 		});
+		
 	});
 </script>
 <section id="main">

@@ -22,6 +22,7 @@ class TwitterFeed extends WP_Widget {
 	// /_/ /_/ /_/\___/\__/_/ /_/\____/\__,_/____/  
 	public function __construct() 
 	{
+		require_once 'google_url.php'; 
 		require_once 'twitteroauth/twitteroauth.php'; 
 		$widget_ops     = array('classname' => 'widget-sign-up', 'description' => 'Display twitter feed' );		
 		parent::__construct('twitterfeed', 'Twitter feed widget', $widget_ops);
@@ -36,10 +37,11 @@ class TwitterFeed extends WP_Widget {
 	{
 		extract($args);
 
-		$title    = isset($instance['title']) ? $instance['title'] : '';
-		$username = isset($instance['username']) ? $instance['username'] : '';
-		$count    = isset($instance['count']) ? $instance['count'] : 0;
+		$title         = isset($instance['title']) ? $instance['title'] : '';
+		$username      = isset($instance['username']) ? $instance['username'] : '';
+		$count         = isset($instance['count']) ? $instance['count'] : 0;
 		$before_widget = str_replace('column', 'column col-2', $before_widget);
+		$goo_gl        = new Googl();
 		
 		echo $before_widget;
 		if($title) echo $before_title.$title.$after_title;		
@@ -50,10 +52,12 @@ class TwitterFeed extends WP_Widget {
 		foreach ($tweets as $key => $value) 
 		{
 			$minutes_ago = intval((microtime(true) - strtotime($value->created_at)) / 60);
+			$url         = 'https://twitter.com/'.$username.'/status/'.$value->id_str;
+			$url         = $goo_gl->shorten($url);
 			?>
 			<li class="block">
 				<div class="cf">
-					<a href="https://twitter.com/<?php echo $username; ?>/status/<?php echo $value->id_str; ?>" class="link">https://twitter.com/<?php echo $username; ?>/status/<?php echo $value->id_str; ?></a>
+					<a href="<?php echo $url; ?>" class="link"><?php echo $url; ?></a>
 					<span class="time"><?php echo $minutes_ago; ?> min ago</span>
 				</div>
 				<p><?php echo $value->text; ?></p>
