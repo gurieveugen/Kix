@@ -128,23 +128,38 @@
 #nav li ul:after{
 	background:none;
 }
+.btn-blue{
+	padding:6px 10px;
+}
+.slider-tabs .slides .btn-blue{
+	width:135px;
+}
 .slider{
 	height:254px;
 	margin:0 -10px;
 }
 .slider-tabs{
 	margin:0 -10px;
-	height:553px;
+	height:436px;
+}
+.slides .center-wrap{
+	width:100%;
 }
 .slider .slide{
 	height:250px;
 }
 .slider-tabs .slides{
-	height:282px;
+	height:282px !important;
+}
+.slider-tabs .slides .text .holder{
+	top:10px;
+}
+.slides .mobile-hide{
+	display:none;
 }
 .slides .text h3{
-	font-size:18px;
-	line-height: 20px;
+	font-size:16px;
+	line-height: 18px;
 	padding:3px 5px 5px;
 }
 .slider-tabs .slide .text,
@@ -152,10 +167,20 @@
 	padding:0 5px;
 	width:100%;
 	font-size:12px;
-	line-height: 14px;
+	line-height: 20px;
+}
+.slides .text ul{
+	margin:0;
+	padding:0 0 3px;
+}
+.slides .text ul li{
+	padding:2px 20px 3px 46px;
 }
 .slides .text p{
 	background:url(../images/transparent-gray.png);
+	padding:2px 5px 2px 5px;
+}
+.slider .slides .text .gray-text{
 	padding:2px 5px 2px 5px;
 }
 .slides .text .row{

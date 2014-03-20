@@ -12,7 +12,7 @@
 		<div class="center-wrap">
 			<div class="text">
 				<div class="holder">
-					<h3>AppKIX... Also Make Apps</h3>
+					<h3>AppKIX.....we also make apps</h3>
 					<p>AppKIX will work with you to make your app idea come to life. <br>Our creative team will provide feedback on your app idea and present you with several design templates to work with. We then build and test your app so it is ready to release to the market. </p>
 					<a href="#" class="btn-blue">Contact us and let’s get started </a>
 				</div>

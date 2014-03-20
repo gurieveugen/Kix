@@ -21,8 +21,9 @@ $items = $GLOBALS['slider']->getItems();
 			{
 				?>
 				<div class="slide active" style="background-image: url(<?php echo $value->images['full']; ?>);">
-					<div class="center-wrap">
-						<div class="text cf">
+					<img src="<?php echo $value->images['full']; ?>" class="mobile-hide" alt="image description">
+					<div class="text cf">
+						<div class="center-wrap">
 							<div class="holder">
 								<h3><?php echo $value->post_title; ?></h3>
 								<p class="gray-text"><?php echo $value->post_content; ?></p>

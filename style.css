@@ -702,11 +702,10 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 	background:url(images/devider-sub-nav.png) repeat-x 0 100%;
 }
 #nav li:hover ul li a{
-	color:#555;
 	display:block;
 }
 #nav li:hover ul li a:hover{
-	color:#009DDC;
+	color:#555;
 }
 .btn-blue{
 	background:#009ddc;
@@ -730,10 +729,10 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 	position:relative;
 }
 .slider{
-	height:474px;
+	position:relative;
 }
 .slider-tabs{
-	height:626px;
+	height:569px;
 }
 .slides{
 	padding:0;
@@ -741,20 +740,24 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 	list-style:none;
 	position:relative;
 }
-.slider-tabs .slides,
-.slider .slides{
+.slider-tabs .slides{
 	height:470px;
 }
-.slider-tabs .slide,
+.slider-tabs .slide{
+	position:relative;
+	height:470px;
+	background-position:50% 0;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
 .slider .slide{
 	position:relative;
 	background-position:50% 0;
 	background-repeat:no-repeat;
-	height:470px;
 	background-size: cover;
 }
 .slider-tabs .cycle .slide{
-	width:100%;
+	width:100% !important;
 }
 .slides img{
 	width:100%;
@@ -793,17 +796,42 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 	position:relative;
 	height:100%;
 }
+.slider .center-wrap{
+	display:table;
+	width:1024px;
+}
 .slides .text{
 	display:table;
 	height:100%;
 	width:530px;
 	font:14px/31px Arial, Helvetica, sans-serif;
 	color:#fff;
+	position:relative;
+}
+.slider .slides .text{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	display:block;
+	width:100%;
+}
+.slider-tabs .slides .text{
+	width:550px;
 }
 .slides .text .holder{
 	display:table-cell;
 	padding:0 10px;
 	vertical-align:middle;
+}
+.slider .slides .text .holder{
+	width:530px;
+}
+.slider-tabs .slides .text .holder{
+	position:absolute;
+	display:block;
+	left:0;
+	top:90px;
 }
 .slides .text h3{
 	background:url(images/transparent-gray.png);
@@ -843,6 +871,7 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 	padding:0;
 	margin:0 0 10px;
 	list-style:none;
+	line-height: 16px;
 }
 .slides .text ul li{
 	background:url(images/transparent-gray.png);
@@ -914,13 +943,13 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 	background-position:-33px 0;
 }
 .section{
-	padding:25px 10px 37px;
+	padding:55px 10px;
 	margin:0 -10px;
 	line-height: 22px;
 	text-align:center;
 }
 .section.s1{
-	padding:54px 10px 37px;
+	padding:54px 10px 55px;
 }
 .section.gray{
 	background:#edf5f8;
