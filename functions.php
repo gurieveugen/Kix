@@ -80,6 +80,7 @@ if(is_admin())
  */
 function change_menu_classes($css_classes)
 {
+	if(is_front_page()) return $css_classes;
 	$css_classes = str_replace("current-menu-item", "current-menu-item active", $css_classes);
 	$css_classes = str_replace("current-menu-parent", "current-menu-parent active", $css_classes);
 	return $css_classes;

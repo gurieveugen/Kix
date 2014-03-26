@@ -672,10 +672,10 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 	left:50%;
 	top:23px;
 	width:187px;
-	background:#f4fff8;
-	border:solid #029039;
+	background:#fff;
+	border:solid #009ddc;
 	border-width:5px 1px 1px;
-	padding:5px 20px 20px;
+	padding:5px 10px 20px;
 	margin:0 0 0 -90px;
 	text-transform:none;
 	-webkit-border-radius:7px;
@@ -688,7 +688,7 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 }
 #nav ul:after{
 	content:'';
-	background:url(images/arrow-green.png) no-repeat;
+	background:url(images/arrow-blue.png) no-repeat;
 	height:9px;
 	width:18px;
 	position:absolute;

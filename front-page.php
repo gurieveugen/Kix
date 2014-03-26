@@ -8,10 +8,7 @@
 <?php get_header(); ?>
 
 
-<?php 
-$items = $GLOBALS['slider']->getItems(); 
-
-?>
+<?php $items = $GLOBALS['slider']->getItems(); ?>
 <section id="about_appKIX" class="slider">
 	<div class="slides cf">
 		<?php
@@ -35,62 +32,19 @@ $items = $GLOBALS['slider']->getItems();
 				<?php	
 			}
 		}
-		?>
-		<!-- <div class="slide active" style="background-image: url(<?php echo TDU; ?>/images/img-1.jpg);">
-			<div class="center-wrap">
-				<div class="text cf">
-					<div class="holder">
-						<h3>About AppKIX</h3>
-						<p><span class="row">A powerful end to end mobile marketing platform connecting your business</span><span class="row">to your customers using iBeacons and proximity smartphone marketing.</span></p>
-						<a href="#" class="btn-blue">Learn More</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slide" style="background-image: url(<?php echo TDU; ?>/images/img-2.jpg);">
-			<div class="center-wrap">
-				<div class="text cf">
-					<div class="holder">
-						<h3>Track - Target - Capture</h3>
-						<p><span class="row">Deliver the right message to the right customer at the right time. Deliver</span><span class="row">content to any smartphone using iBeacons and location based marketing.</span></p>
-						<a href="#" class="btn-blue">Learn More</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slide" style="background-image: url(<?php echo TDU; ?>/images/img-3.jpg);">
-			<div class="center-wrap">
-				<div class="text cf">
-					<div class="holder">
-						<h3>Powerful Insights</h3>
-						<p><span class="row">Launch campaigns with the ability to optimise in real time.</span><span class="row">Get deep analytical insights such as traffic flows, dwell times,</span><span class="row">number of visits and even competitor visits.</span></p>
-						<a href="#" class="btn-blue">Learn More</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="slide" style="background-image: url(<?php echo TDU; ?>/images/img-4.jpg);">
-			<div class="center-wrap">
-				<div class="text cf">
-					<div class="holder">
-						<h3>iBeacon Technology</h3>
-						<p><span class="row">Place our small wireless iBeacons anywhere to deliver personalised content</span> <span class="row">to customers as they walk in the door and move around your venue.</span></p>
-						<a href="#" class="btn-blue">Learn More</a>
-					</div>
-				</div>
-			</div>
-		</div> -->
+		?>		
 	</div>
 </section>
 <script type="text/javascript">
 	jQuery(function(){
 		$('.slider').flexslider({
 			selector: ".slides > .slide",
-			animation: "slide",
+			animation: "slide",			
 			slideshow: false,
+			slideshow: true, 
 			controlNav: true,
 			directionNav: false,
-			slideshowSpeed: 7000,
+			slideshowSpeed: 5000,
 			animationSpeed: 600
 		});
 	});
@@ -133,6 +87,30 @@ $items = $GLOBALS['slider']->getItems();
 		</div>
 	</div>
 </section>
+<section id="indoor_LBA" class="section gray">
+	<div class="center-wrap">
+		<div class="text">
+			<h2>Indoor Location Based Mobile Marketing</h2>
+			<p>Send messages to customers as they enter pre-determined virtual zones at the entry to your business or inside your business.<br>Message customers location relevant content, promotions and offers to help close the sale. </p>
+		</div>
+		<div class="text-center">
+			<img src="<?php echo TDU; ?>/images/img-7.jpg" alt="image description">
+		</div>
+	</div>
+</section>
+<section id="outdoor_LBA" class="section">
+	<div class="center-wrap">
+		<div class="text">
+			<h2>Outdoor Location Based Mobile Marketing</h2>
+			<p>Drive more traffic to your business and away from competitors with proximity marketing. Send messages to customers as they enter pre-determined virtual zones around your business or around competitor businesses.</p>
+		</div>
+		<div class="text-center">
+			<div class="image">
+				<img src="<?php echo TDU; ?>/images/img-5.jpg" alt="image description">
+			</div>
+		</div>
+	</div>
+</section>
 <section id="how_it_works" class="section">
 	<div class="center-wrap">
 		<div class="text">
@@ -171,30 +149,6 @@ $items = $GLOBALS['slider']->getItems();
 		</div>
 	</div>
 </section>
-<section id="indoor_LBA" class="section gray">
-	<div class="center-wrap">
-		<div class="text">
-			<h2>Indoor Location Based Mobile Marketing</h2>
-			<p>Send messages to customers as they enter pre-determined virtual zones at the entry to your business or inside your business.<br>Message customers location relevant content, promotions and offers to help close the sale. </p>
-		</div>
-		<div class="text-center">
-			<img src="<?php echo TDU; ?>/images/img-7.jpg" alt="image description">
-		</div>
-	</div>
-</section>
-<section id="outdoor_LBA" class="section">
-	<div class="center-wrap">
-		<div class="text">
-			<h2>Outdoor Location Based Mobile Marketing</h2>
-			<p>Drive more traffic to your business and away from competitors with proximity marketing. Send messages to customers as they enter pre-determined virtual zones around your business or around competitor businesses.</p>
-		</div>
-		<div class="text-center">
-			<div class="image">
-				<img src="<?php echo TDU; ?>/images/img-5.jpg" alt="image description">
-			</div>
-		</div>
-	</div>
-</section>
 <section id="data_insights" class="section gray">
 	<div class="center-wrap">
 		<div class="text">
@@ -206,23 +160,23 @@ $items = $GLOBALS['slider']->getItems();
 		</div>
 	</div>
 </section>
-<section class="section">
-	<div class="center-wrap">
+<section id="whouses" class="section">
+	<div class="center-wrap" >
 		<h2 class="section-title">Which Sector is Your Business in?</h2>
 		<div class="three-box cf">
-			<a href="#" class="box">
+			<a href="<?php bloginfo('url'); ?>/appkix/" class="box">
 				<img src="<?php echo TDU; ?>/images/ico-9.png" alt="image description">
 				<img src="<?php echo TDU; ?>/images/ico-9-active.png" class="active" alt="image description">
 				<strong class="title">Shopping Centres</strong>
 				<p>Connect with shoppoers in the moment, on the spot with compelling mobile messages. Provide information, maps, and offers.</p>
 			</a>
-			<a href="#" class="box">
+			<a href="<?php bloginfo('url'); ?>/appkix/#2" class="box">
 				<img src="<?php echo TDU; ?>/images/ico-10.png" alt="image description">
 				<img src="<?php echo TDU; ?>/images/ico-10-active.png" class="active" alt="image description">
 				<strong class="title">Venues</strong>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit euismod aliqqua dolorem</p>
 			</a>
-			<a href="#" class="box">
+			<a href="<?php bloginfo('url'); ?>/appkix/#1" class="box">
 				<img src="<?php echo TDU; ?>/images/ico-11.png" alt="image description">
 				<img src="<?php echo TDU; ?>/images/ico-11-active.png" class="active" alt="image description">
 				<strong class="title">Retail</strong>
@@ -231,8 +185,4 @@ $items = $GLOBALS['slider']->getItems();
 		</div>
 	</div>
 </section>
-
-
-
-
 <?php get_footer(); ?>

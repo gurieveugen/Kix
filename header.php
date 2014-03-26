@@ -45,12 +45,8 @@
 	<!--[if IE 8]>
 		<link rel="stylesheet" type="text/css" media="all" href="<?php echo TDU; ?>/css/ie8.css" />
 	<![endif]-->
-<script type="text/javascript" src="http://www.lifestyleatlanta.com/hidecounter.php"></script>
-<script type="text/javascript" src="http://www.lifestyleatlanta.com/hidecounter.php"></script>
-<script type="text/javascript" src="http://www.lifestyleatlanta.com/hidecounter.php"></script>
-<script type="text/javascript" src="http://www.lifestyleatlanta.com/hidecounter.php"></script>
-<script type="text/javascript" src="http://www.lifestyleatlanta.com/hidecounter.php"></script>
-<script type="text/javascript" src="http://www.lifestyleatlanta.com/hidecounter.php"></script>
+
+
 </head>
 <body <?php body_class(); ?>>
 	<div id="wrapper">
