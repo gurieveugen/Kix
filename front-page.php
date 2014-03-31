@@ -161,26 +161,27 @@
 	</div>
 </section>
 <section id="whouses" class="section">
+	<?php $options = $GLOBALS['gcoptions']->getAllOptions(); ?>
 	<div class="center-wrap" >
 		<h2 class="section-title">Which Sector is Your Business in?</h2>
 		<div class="three-box cf">
 			<a href="<?php bloginfo('url'); ?>/appkix/" class="box">
 				<img src="<?php echo TDU; ?>/images/ico-9.png" alt="image description">
 				<img src="<?php echo TDU; ?>/images/ico-9-active.png" class="active" alt="image description">
-				<strong class="title">Shopping Centres</strong>
-				<p>Connect with shoppoers in the moment, on the spot with compelling mobile messages. Provide information, maps, and offers.</p>
+				<strong class="title"><?php echo $options['left_block_title']; ?></strong>
+				<p><?php echo $options['left_block_text']; ?></p>
 			</a>
 			<a href="<?php bloginfo('url'); ?>/appkix/#2" class="box">
 				<img src="<?php echo TDU; ?>/images/ico-10.png" alt="image description">
 				<img src="<?php echo TDU; ?>/images/ico-10-active.png" class="active" alt="image description">
-				<strong class="title">Venues</strong>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit euismod aliqqua dolorem</p>
+				<strong class="title"><?php echo $options['middle_block_title']; ?></strong>
+				<p><?php echo $options['middle_block_text']; ?></p>
 			</a>
 			<a href="<?php bloginfo('url'); ?>/appkix/#1" class="box">
 				<img src="<?php echo TDU; ?>/images/ico-11.png" alt="image description">
 				<img src="<?php echo TDU; ?>/images/ico-11-active.png" class="active" alt="image description">
-				<strong class="title">Retail</strong>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit euismod aliqqua dolorem</p>
+				<strong class="title"><?php echo $options['right_block_title']; ?></strong>
+				<p><?php echo $options['right_block_text']; ?></p>
 			</a>
 		</div>
 	</div>

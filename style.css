@@ -1621,6 +1621,8 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 	color:#fff;
 	padding:5px 10px;
 }
+.pre-wrap{ white-space: pre; }
+
 @media screen and (max-width: 1024px) {
 	.footer-area .phone{
 		font-size:17px;

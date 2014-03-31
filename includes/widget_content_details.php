@@ -35,7 +35,7 @@ class ContactDetails extends WP_Widget {
 		if($title) echo $before_title.$title.$after_title;
 		?>
 		<div class="contact-block">
-			<address><?php echo $text_above; ?></address>
+			<address class="pre-wrap"><?php echo $text_above; ?></address>
 			<span class="tel"><?php echo $tel; ?></span>
 			<a href="mailto:<?php echo $email; ?>" class="mail"><?php echo $email; ?></a>
 			<?php echo $this->getSocials($instance); ?>
