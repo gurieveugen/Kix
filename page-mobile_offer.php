@@ -11,7 +11,7 @@
 	<div class="blue-box">
 		<div class="center-wrap">
 			<div class="text-center">
-				<h2>Mobile Offers and Loyalty</h2>
+				<h2>MOBILE LOYALTY AND REWARDS</h2>
 				<p>Your customers carry your brand in their pocket enjoying targeted deals and loyalty rewards via their smartphones.</p>
 			</div>
 		</div>

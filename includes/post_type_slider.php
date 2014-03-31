@@ -17,7 +17,7 @@ class Slider{
 		add_filter('manage_edit-slide_columns', array($this, 'columnThumb'));	
 		add_action('manage_posts_custom_column', array($this, 'columnthumbShow'), 10, 2);
 		add_shortcode('slider', array($this, 'displaySlider'));
-		add_image_size('slide-image', 1580, 470, false);
+		add_image_size('slide-image', 1580, 470, true);
 		add_image_size('slide-thumb-image', 100, 100, true);				
 	}
 

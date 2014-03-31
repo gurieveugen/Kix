@@ -114,7 +114,7 @@
 <section id="how_it_works" class="section">
 	<div class="center-wrap">
 		<div class="text">
-			<h2>How Does AppKIX Work</h2>
+			<h2>HOW APPKIX WORKS</h2>
 			<p>AppKIX provides you with everything you need to create and deliver highly targeted location based content and offers through your mobile phone app. Getting started is simple. </p>
 		</div>
 		<div class="four-columns">
@@ -163,7 +163,7 @@
 <section id="whouses" class="section">
 	<?php $options = $GLOBALS['gcoptions']->getAllOptions(); ?>
 	<div class="center-wrap" >
-		<h2 class="section-title">Which Sector is Your Business in?</h2>
+		<h2 class="section-title">WHO USES APPKIX?</h2>
 		<div class="three-box cf">
 			<a href="<?php bloginfo('url'); ?>/appkix/" class="box">
 				<img src="<?php echo TDU; ?>/images/ico-9.png" alt="image description">
