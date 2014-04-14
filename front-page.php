@@ -23,7 +23,7 @@
 						<div class="center-wrap">
 							<div class="holder">
 								<h3><?php echo $value->post_title; ?></h3>
-								<p class="gray-text"><?php echo $value->post_content; ?></p>
+								<p class="grey-text"><?php echo $value->post_content; ?></p>
 								<a href="<?php echo $value->meta['learn_more']; ?>" class="btn-blue">Learn More</a>
 							</div>
 						</div>
@@ -49,7 +49,7 @@
 		});
 	});
 </script>
-<section id="why_use_appKIX" class="section s1 gray">
+<section id="why_use_appKIX" class="section s1 grey">
 	<div class="center-wrap">
 		<div class="text">
 			<h2>Why Use AppKIX?</h2>
@@ -87,7 +87,7 @@
 		</div>
 	</div>
 </section>
-<section id="indoor_LBA" class="section gray">
+<section id="indoor_LBA" class="section grey">
 	<div class="center-wrap">
 		<div class="text">
 			<h2>Indoor Location Based Mobile Marketing</h2>
@@ -105,8 +105,8 @@
 			<p>Drive more traffic to your business and away from competitors with proximity marketing. Send messages to customers as they enter pre-determined virtual zones around your business or around competitor businesses.</p>
 		</div>
 		<div class="text-center">
-			<div class="image">
-				<img src="<?php echo TDU; ?>/images/img-5.jpg" alt="image description">
+			<div class="image" style="width: 870px;">
+				<img src="<?php echo TDU; ?>/images/untitled-design-3.png" alt="image description">
 			</div>
 		</div>
 	</div>
@@ -114,7 +114,7 @@
 <section id="how_it_works" class="section">
 	<div class="center-wrap">
 		<div class="text">
-			<h2>HOW APPKIX WORKS</h2>
+			<h2>How AppKIX Works</h2>
 			<p>AppKIX provides you with everything you need to create and deliver highly targeted location based content and offers through your mobile phone app. Getting started is simple. </p>
 		</div>
 		<div class="four-columns">
@@ -149,7 +149,7 @@
 		</div>
 	</div>
 </section>
-<section id="data_insights" class="section gray">
+<section id="data_insights" class="section grey">
 	<div class="center-wrap">
 		<div class="text">
 			<h2>Powerful Data Insights</h2>
@@ -163,7 +163,7 @@
 <section id="whouses" class="section">
 	<?php $options = $GLOBALS['gcoptions']->getAllOptions(); ?>
 	<div class="center-wrap" >
-		<h2 class="section-title">WHO USES APPKIX?</h2>
+		<h2 class="section-title">Who uses AppKIX?</h2>
 		<div class="three-box cf">
 			<a href="<?php bloginfo('url'); ?>/appkix/" class="box">
 				<img src="<?php echo TDU; ?>/images/ico-9.png" alt="image description">

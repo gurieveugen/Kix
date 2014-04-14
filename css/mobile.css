@@ -140,16 +140,15 @@
 }
 .slider-tabs{
 	margin:0 -10px;
-	height:436px;
+}
+.slider-tabs .slide-holder{
+	height:265px;
 }
 .slides .center-wrap{
 	width:100%;
 }
-.slider .slide{
-	height:250px;
-}
 .slider-tabs .slides{
-	height:282px !important;
+	height:530px !important;
 }
 .slider-tabs .slides .text .holder{
 	top:10px;
@@ -173,6 +172,9 @@
 	margin:0;
 	padding:0 0 3px;
 }
+.slider-tabs .slides .text ul{margin:0;}
+.slider-tabs .slides .text ul li{padding:2px 20px 3px 30px;}
+.slides .text ul li:before{left:5px;}
 .slides .text ul li{
 	padding:2px 20px 3px 46px;
 }
@@ -275,6 +277,27 @@
 	margin:0 -10px;
 	padding:10px 20px;
 }
+.section-info{
+	margin:0 -10px;
+	padding:30px 20px;
+}
+.section-info h3{
+	text-align:center;
+	font-size:26px;
+}
+.section-info .alignleft,
+.section-info .alignright{
+	display:block;
+	float:none;
+	margin:0 auto 20px;
+}
+.section-info .text{
+	overflow:visible;
+}
+.section-info .text ul li{
+	width:100%;
+	float:none;
+}
 .visual{
 	height:300px;
 	margin:0 -10px;
@@ -327,4 +350,7 @@
 }
 .image-block{
 	height:130px;
+}
+.two-columns.content .column{
+	margin:0 0 20px;
 }
