@@ -32,7 +32,7 @@
 									<li>How can you enhance the shopper experience?</li>
 									<li>How can you get shoppers to return more often?</li>
 								</ul>
-							<a href="#" class="btn-blue">Get in Touch</a>
+							<a href="<?php bloginfo('url'); ?>/contact-us/" class="btn-blue">Get in Touch</a>
 						</div>
 					</div>
 				</div>
@@ -48,7 +48,7 @@
 								<li>Promote retailer offers that can be redeemed in-store</li>
 								<li>Increase shopper engagement and loyalty</li>
 							</ul>
-							<a href="#" class="btn-blue">Get in Touch</a>
+							<a href="<?php bloginfo('url'); ?>/contact-us/" class="btn-blue">Get in Touch</a>
 						</div>
 					</div>
 				</div>
@@ -66,7 +66,7 @@
 									<li>How can you enhance the shopper experience?</li>
 									<li>How can you get shoppers to return more often?</li>
 								</ul>
-							<a href="#" class="btn-blue">Get in Touch</a>
+							<a href="<?php bloginfo('url'); ?>/contact-us/" class="btn-blue">Get in Touch</a>
 						</div>
 					</div>
 				</div>
@@ -82,7 +82,7 @@
 								<li>Enhance the in-store experience by delivering value added features <br>such as product matching, product specs, loyalty and contactiess payments</li>
 								<li>create and redeem offers, deals and loyalty programs in your store <br>with our retail iBeacon attached to your cash register</li>
 							</ul>
-							<a href="#" class="btn-blue">Get in Touch</a>
+							<a href="<?php bloginfo('url'); ?>/contact-us/" class="btn-blue">Get in Touch</a>
 						</div>
 					</div>
 				</div>
@@ -100,7 +100,7 @@
 									<li>How can you enhance the customers experience?</li>
 									<li>How can you get customers to return more often?</li>
 								</ul>
-							<a href="#" class="btn-blue">Get in Touch</a>
+							<a href="<?php bloginfo('url'); ?>/contact-us/" class="btn-blue">Get in Touch</a>
 						</div>
 					</div>
 				</div>
@@ -116,7 +116,7 @@
 								<li>Let others join in the conversation through social media participation <br>and engagement</li>
 								<li>Use beacons to deliver powerful indoor mapping and directions</li>
 							</ul>
-							<a href="#" class="btn-blue">Get in Touch</a>
+							<a href="<?php bloginfo('url'); ?>/contact-us/" class="btn-blue">Get in Touch</a>
 						</div>
 					</div>
 				</div>

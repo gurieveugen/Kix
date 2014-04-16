@@ -2,18 +2,24 @@
 /**
  * Register new widget
  */
-add_action('widgets_init', create_function('', 'register_widget( "TwitterFeed" );'));
+add_action('widgets_init', create_function('', 'register_widget( "FacebookFeed" );'));
 
-class TwitterFeed extends WP_Widget {
+class FacebookFeed extends WP_Widget {
 	//                          __              __      
 	//   _________  ____  _____/ /_____ _____  / /______
 	//  / ___/ __ \/ __ \/ ___/ __/ __ `/ __ \/ __/ ___/
 	// / /__/ /_/ / / / (__  ) /_/ /_/ / / / / /_(__  ) 
 	// \___/\____/_/ /_/____/\__/\__,_/_/ /_/\__/____/  
-	const CONSUMER_KEY        = 'FoRJZBenKUFmIQFLDp2gQ';
-	const CONSUMER_SECRET     = 'Kudk8D5ZAxb5tWAoXRO21T47gp6EXRplJ82MEUiqc';
-	const ACCESS_TOKEN        = '532546390-23aT4nDlWpYLA543yUfmExBqFs0RDb9AZBRbNFTd';
-	const ACCESS_TOKEN_SECRET = 'Mt9Hj9aocqQ7qSQGzowzUkFWpvJx8kyBoLAV9GGfV9kvL';
+	const FACEBOOK_APP_ID = '1425546341034865';
+	const FACEBOOK_SECRET = '2b5b3b592646a60b9cf5859405efe17c';
+
+	//                __  _                 
+	//   ____  ____  / /_(_)___  ____  _____
+	//  / __ \/ __ \/ __/ / __ \/ __ \/ ___/
+	// / /_/ / /_/ / /_/ / /_/ / / / (__  ) 
+	// \____/ .___/\__/_/\____/_/ /_/____/  
+	//     /_/                              
+	private $facebook;
 
 	//                    __  __              __    
 	//    ____ ___  ___  / /_/ /_  ____  ____/ /____
@@ -23,9 +29,15 @@ class TwitterFeed extends WP_Widget {
 	public function __construct() 
 	{
 		require_once 'google_url.php'; 
-		require_once 'twitteroauth/twitteroauth.php'; 
-		$widget_ops     = array('classname' => 'widget-sign-up', 'description' => 'Display twitter feed' );		
-		parent::__construct('twitterfeed', 'Twitter feed widget', $widget_ops);
+		require_once 'facebook/facebook.php'; 
+
+
+		$widget_ops     = array('classname' => 'widget-sign-up', 'description' => 'Display facebook feed' );		
+		parent::__construct('facebookfeed', 'Facebook feed widget', $widget_ops);
+
+		$this->facebook = new Facebook(array(
+			'appId'  => self::FACEBOOK_APP_ID,
+			'secret' => self::FACEBOOK_SECRET)); 
 	}
 
 	/**
@@ -39,20 +51,19 @@ class TwitterFeed extends WP_Widget {
 
 		$title         = isset($instance['title']) ? $instance['title'] : '';
 		$username      = isset($instance['username']) ? $instance['username'] : '';
-		$count         = isset($instance['count']) ? $instance['count'] : 0;
-		$before_widget = str_replace('column', 'column col-2', $before_widget);
+		$count         = isset($instance['count']) ? $instance['count'] : 1;
+		$before_widget = str_replace('column', 'column col-3', $before_widget);
 		$goo_gl        = new Googl();
 		
 		echo $before_widget;
-		if($title) echo $before_title.$title.$after_title;		
-		$connection = new TwitterOAuth(self::CONSUMER_KEY, self::CONSUMER_SECRET, self::ACCESS_TOKEN, self::ACCESS_TOKEN_SECRET);		 
-		$tweets     = $connection->get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=".$username."&count=".$count);		 
-		
+		echo ($title) ? $before_title.$title.$after_title : '';		
+
+		$fb = $this->getMessages($username, $count);
 		echo '<ul class="twit-blocks">';
-		foreach ($tweets as $key => $value) 
+		foreach ($fb as $msg) 
 		{
-			$minutes_ago = intval((microtime(true) - strtotime($value->created_at)) / 60);
-			$url         = 'https://twitter.com/'.$username.'/status/'.$value->id_str;
+			$minutes_ago = intval((microtime(true) - strtotime($msg['created_time'])) / 60);
+			$url         = 'https://www.facebook.com/'.$msg['id'].'/';
 			$url         = $goo_gl->shorten($url);
 			?>
 			<li class="block">
@@ -60,12 +71,40 @@ class TwitterFeed extends WP_Widget {
 					<a href="<?php echo $url; ?>" class="link"><?php echo $url; ?></a>
 					<span class="time"><?php echo $minutes_ago; ?> min ago</span>
 				</div>
-				<p><?php echo $value->text; ?></p>
+				<p><?php echo $msg['msg']; ?></p>
 			</li>
 			<?php
 		}
-		echo '</ul><!-- twit-blocks -->';
+		echo '</ul><!-- twit-blocks -->';		
+
 		echo $after_widget;
+	}
+
+	/**
+	 * Get facebook messages
+	 * @param  string $user 
+	 * @return array
+	 */
+	public function getMessages($user, $count)
+	{
+		$fb = array();
+		$user_profile = $this->facebook->api('/'.$user.'/posts');
+		
+		foreach ($user_profile['data'] as &$post) 
+		{
+			$id  = $post['id'];
+			$msg = isset($post['story']) ? $post['story'] : '';
+			$msg = isset($post['message']) ? $post['message'] : $msg;
+			if(strlen($msg) && $count)
+			{
+				$count--;
+				$fb[] = array(
+					'id'           => $id, 
+					'msg'          => $msg,
+					'created_time' => $post['created_time']);
+			}
+		}		
+		return $fb;
 	}
 
 	/**
