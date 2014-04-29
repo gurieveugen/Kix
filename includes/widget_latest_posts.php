@@ -26,7 +26,8 @@ class LatestBlogPost extends WP_Widget {
 		extract($args);
 
 		$title         = isset($instance['title']) ? $instance['title'] : '';
-		$count         = isset($instance['count']) ? $instance['count'] : 0;
+		$count         = isset($instance['count']) ? $instance['count'] : 0;		
+		$display_link  = $instance['display_link'];
 		$before_widget = str_replace('column', 'column col-3', $before_widget);
 
 		$args = array(
@@ -59,7 +60,15 @@ class LatestBlogPost extends WP_Widget {
 				?>
 				<li class="block">
 					<p><?php echo $this->getShortString($value->post_content); ?></p>
-					<a href="<?php echo get_permalink($value->ID); ?>"><span class="date"><?php echo $date; ?></span></a>
+					<?php
+					if($display_link === true)
+					{
+						?>
+						<a href="<?php echo get_permalink($value->ID); ?>"><span class="date"><?php echo $date; ?></span></a>
+						<?php
+					}
+					?>
+					
 				</li>
 				<?php					
 			}
@@ -74,9 +83,9 @@ class LatestBlogPost extends WP_Widget {
 	 */
 	public function form($instance) 
 	{	
-		$title    = isset($instance['title']) ? $instance['title'] : '';	
-		$count    = isset($instance['count']) ? $instance['count'] : '';			
-
+		$title        = isset($instance['title']) ? $instance['title'] : '';	
+		$count        = isset($instance['count']) ? $instance['count'] : '';			
+		$display_link = $this->checked($instance['display_link']);
 		?>
 		<table>
 			<tbody>
@@ -88,9 +97,26 @@ class LatestBlogPost extends WP_Widget {
 					<th><label for="<?php echo $this->get_field_id('count'); ?>"><?php _e('Count:'); ?></label></th>
 					<td><input type="text" id="<?php echo $this->get_field_id('count'); ?>" name="<?php echo $this->get_field_name('count'); ?>" value="<?php echo $count; ?>" class="w100"></td>
 				</tr>						
+				<tr>
+					<th><label for="<?php echo $this->get_field_id('display_link'); ?>"><?php _e('Display links:'); ?></label></th>
+					<td>
+						<input type="hidden" name="<?php echo $this->get_field_name('display_link'); ?>" value="off">
+						<input type="checkbox" id="<?php echo $this->get_field_id('display_link'); ?>" name="<?php echo $this->get_field_name('display_link'); ?>" <?php echo $display_link; ?>>
+					</td>
+				</tr>						
 			</tbody>
 		</table>		
 		<?php
+	}
+
+	/**
+	 * Helper function for checkbox
+	 * @param  boolean $yes
+	 * @return string
+	 */
+	private function checked($yes = true)	
+	{
+		return ($yes === true) ? 'checked' : '';
 	}
 
 	/**
@@ -101,9 +127,10 @@ class LatestBlogPost extends WP_Widget {
 	 */
 	public function update( $new_instance, $old_instance ) 
 	{
-		$instance             = $old_instance;
-		$instance['title']    = strip_tags($new_instance['title']);			
-		$instance['count']    = intval($new_instance['count']);			
+		$instance                 = $old_instance;
+		$instance['title']        = strip_tags($new_instance['title']);			
+		$instance['count']        = intval($new_instance['count']);			
+		$instance['display_link'] = ($new_instance['display_link'] == 'on');		
 		
 		return $instance;
 	}
