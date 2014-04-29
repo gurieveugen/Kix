@@ -8,7 +8,7 @@
 
 
 <div class="visual">
-	<div class="visual-holder" style="background-image: url(<?php echo TDU; ?>/images/img-11.jpg);background-position:50% 0;background-size: cover;background-repeat:no-repeat;">
+	<div class="visual-holder" style="background-image: url(<?php echo TDU; ?>/images/img-11-1.jpg);background-position:50% 0;background-size: cover;background-repeat:no-repeat;">
 		<div class="center-wrap">
 			<div class="text">
 				<div class="holder">

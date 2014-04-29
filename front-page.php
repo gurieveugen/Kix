@@ -49,6 +49,44 @@
 		});
 	});
 </script>
+<section id="how_it_works"  class="section">
+	<div class="center-wrap">
+		<div class="text">
+			<h2>How Does AppKIX Work</h2>
+			<p>AppKIX provides you with everything you need to create and deliver highly targeted location based content and offers through your mobile phone app. Getting started is simple.</p>
+		</div>
+		<div class="four-columns">
+			<div class="column">
+				<div class="image">
+					<img src="<?php echo TDU; ?>/images/ico-5.png" alt="image description">
+				</div>
+				<h4>Set Up Beacons</h4>
+				<p>AppKIX beacons are easy to install and deploy. The AppKIX dashboard configures and identifies each individual AppKIX beacon.</p>
+			</div>
+			<div class="column">
+				<div class="image">
+					<img src="<?php echo TDU; ?>/images/ico-6.png" alt="image description">
+				</div>
+				<h4>Integrate Our SDK</h4>
+				<p>The AppKIX SDK seamlessly integrates with your existing mobile app. Use our API for more advanced configurations.</p>
+			</div>
+			<div class="column">
+				<div class="image">
+					<img src="<?php echo TDU; ?>/images/ico-7.png" alt="image description">
+				</div>
+				<h4>Launch Campaigns</h4>
+				<p>Drag and drop video, text, audio or weblink files to deliver cool content to customers in or around your store or venue. Target customers using proximity marketing. </p>
+			</div>
+			<div class="column">
+				<div class="image">
+					<img src="<?php echo TDU; ?>/images/ico-8.png" alt="image description">
+				</div>
+				<h4>Analyse Results</h4>
+				<p>View and analyse the most effective campaigns. Create precise target campaigns to specific customer profiles.</p>
+			</div>
+		</div>
+	</div>
+</section>
 <section id="why_use_appKIX" class="section s1 grey">
 	<div class="center-wrap">
 		<div class="text">
@@ -87,18 +125,18 @@
 		</div>
 	</div>
 </section>
-<section id="indoor_LBA" class="section grey">
+<section id="indoor_LBA" class="section">
 	<div class="center-wrap">
 		<div class="text">
 			<h2>Indoor Location Based Mobile Marketing</h2>
 			<p>Send messages to customers as they enter pre-determined virtual zones at the entry to your business or inside your business.<br>Message customers location relevant content, promotions and offers to help close the sale. </p>
 		</div>
 		<div class="text-center">
-			<img src="<?php echo TDU; ?>/images/img-7.jpg" alt="image description">
+			<img src="<?php echo TDU; ?>/images/img-7-1.jpg" alt="image description">
 		</div>
 	</div>
 </section>
-<section id="outdoor_LBA" class="section">
+<section id="outdoor_LBA" class="section grey">
 	<div class="center-wrap">
 		<div class="text">
 			<h2>Outdoor Location Based Mobile Marketing</h2>
@@ -111,45 +149,7 @@
 		</div>
 	</div>
 </section>
-<section id="how_it_works" class="section">
-	<div class="center-wrap">
-		<div class="text">
-			<h2>How AppKIX Works</h2>
-			<p>AppKIX provides you with everything you need to create and deliver highly targeted location based content and offers through your mobile phone app. Getting started is simple. </p>
-		</div>
-		<div class="four-columns">
-			<div class="column">
-				<div class="image">
-					<img src="<?php echo TDU; ?>/images/ico-5.png" alt="image description">
-				</div>
-				<h4>Set Up Beacons</h4>
-				<p>AppKIX beacons are easy to install and deploy. The AppKIX dashboard configures and identifies each individual AppKIX beacon.</p>
-			</div>
-			<div class="column">
-				<div class="image">
-					<img src="<?php echo TDU; ?>/images/ico-6.png" alt="image description">
-				</div>
-				<h4>Integrate Our SDK</h4>
-				<p>The AppKIX SDK seamlessly integrates with your existing mobile app. Use our API for more advanced configurations.</p>
-			</div>
-			<div class="column">
-				<div class="image">
-					<img src="<?php echo TDU; ?>/images/ico-7.png" alt="image description">
-				</div>
-				<h4>Launch Campaigns</h4>
-				<p>Drag and drop video, text, audio or weblink files to deliver cool content to customers in or around your store or venue. Target customers using proximity marketing.</p>
-			</div>
-			<div class="column">
-				<div class="image">
-					<img src="<?php echo TDU; ?>/images/ico-8.png" alt="image description">
-				</div>
-				<h4>Analyse Results</h4>
-				<p>View and analyse the most effective campaigns. Create precise target campaigns to specific customer profiles. </p>
-			</div>
-		</div>
-	</div>
-</section>
-<section id="data_insights" class="section grey">
+<section id="data_insights" class="section">
 	<div class="center-wrap">
 		<div class="text">
 			<h2>Powerful Data Insights</h2>
@@ -160,10 +160,10 @@
 		</div>
 	</div>
 </section>
-<section id="whouses" class="section">
+<section id="whouses" class="section grey">
 	<?php $options = $GLOBALS['gcoptions']->getAllOptions(); ?>
 	<div class="center-wrap" >
-		<h2 class="section-title">Who uses AppKIX?</h2>
+		<h2 class="section-title">Which Sector is Your Business in?</h2>
 		<div class="three-box cf">
 			<a href="<?php bloginfo('url'); ?>/appkix/" class="box">
 				<img src="<?php echo TDU; ?>/images/ico-9.png" alt="image description">

@@ -28,7 +28,7 @@
 							<h3>AppKIX for Shopping Centres</h3>
 								<ul class="question-list">
 									<li>Are you shoppers engaged? inspired?</li>
-									<li>Are you connecting shoopers with content that interest them!</li>
+									<li>Are you connecting shoppers with content that interest them?</li>
 									<li>How can you enhance the shopper experience?</li>
 									<li>How can you get shoppers to return more often?</li>
 								</ul>
@@ -62,7 +62,7 @@
 							<h3>AppKIX for Retailers</h3>
 								<ul class="question-list">
 									<li>Are you shoppers engaged? inspired?</li>
-									<li>Are you connecting shoopers with content that interest them!</li>
+									<li>Are you connecting shoppers with content that interest them?</li>
 									<li>How can you enhance the shopper experience?</li>
 									<li>How can you get shoppers to return more often?</li>
 								</ul>
@@ -78,9 +78,9 @@
 							<h3>Start Connecting With <br>Your Customers</h3>
 							<ul class="check-list">
 								<li>Increase store traffic by delivering notifications as people walk past <br>your stores</li>
-								<li>Influence in-sotre conversion by delivering targeted offers and content <br>as people browse your products</li>
+								<li>Influence in-store conversion by delivering targeted offers and content <br>as people browse your products</li>
 								<li>Enhance the in-store experience by delivering value added features <br>such as product matching, product specs, loyalty and contactiess payments</li>
-								<li>create and redeem offers, deals and loyalty programs in your store <br>with our retail iBeacon attached to your cash register</li>
+								<li>Create and redeem offers, deals and loyalty programs in your store <br>with our retail iBeacon attached to your cash register</li>
 							</ul>
 							<a href="<?php bloginfo('url'); ?>/contact-us/" class="btn-blue">Get in Touch</a>
 						</div>
@@ -89,14 +89,14 @@
 			</div>
 		</div>
 		<div class="slide">
-			<div class="slide-holder" style="background-image: url(<?php echo TDU; ?>/images/img-22.jpg);">
+			<div class="slide-holder" style="background-image: url(<?php echo TDU; ?>/images/img-22-1.jpg);">
 				<div class="center-wrap">
 					<div class="text cf">
 						<div class="holder">
 							<h3>AppKIX for Venues</h3>
 								<ul class="question-list">
 									<li>Are you customers engaged? inspired?</li>
-									<li>Are you connecting customers with content that interest them!</li>
+									<li>Are you connecting customers with content that interest them?</li>
 									<li>How can you enhance the customers experience?</li>
 									<li>How can you get customers to return more often?</li>
 								</ul>
@@ -105,7 +105,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="slide-holder" style="background-image: url(<?php echo TDU; ?>/images/img-23.jpg);">
+			<div class="slide-holder" style="background-image: url(<?php echo TDU; ?>/images/img-23-1.jpg);">
 				<div class="center-wrap">
 					<div class="text cf">
 						<div class="holder">
