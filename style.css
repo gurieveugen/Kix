@@ -575,6 +575,18 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 .mobile-visible{
 	display:none;
 }
+.text-left{
+	text-align: left !important;
+}
+.text-right{
+	text-align: right !important;
+}
+.text-center{
+	text-align: center !important;
+}
+.text-justify{
+	text-align: justify !important;
+}
 #wrapper{
 	padding: 0 10px;
 	overflow:hidden;
@@ -588,12 +600,10 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 *[class*="1300"]{
 	max-width:1300px;
 }
-.text-center{
-	text-align:center;
-}
 #header{
-	padding:10px 10px 14px;
+	padding:10px 10px 17px;
 	margin:0 -10px;
+	background: url(images/bg-green-strip.gif) repeat-x 0 100%;
 }
 .logo{
 	float:left;
@@ -753,6 +763,7 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 }
 .slider .slide{
 	position:relative;
+	overflow: hidden;
 	background-position:50% 0;
 	background-repeat:no-repeat;
 	background-size: cover;
@@ -951,7 +962,7 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 }
 .section{
 	min-height:488px;
-	padding:55px 10px;
+	padding:40px 10px;
 	margin:0 -10px;
 	line-height: 22px;
 	text-align:center;
@@ -962,6 +973,9 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 .grey{
 	background:#edf5f8;
 }
+.section.height-auto{
+	min-height: inherit;
+}
 .section .text{
 	padding:0 50px 25px;
 	text-align:center;
@@ -971,10 +985,33 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 .section .text p{
 	margin:0;
 }
-.section h2{
+.section h2,
+.title-section{
 	font:40px/43px 'MyriadPro', Arial, Helvetica, sans-serif;
 	margin:0 0 5px;
 	color:#333;
+}
+.section h3,
+h3.title-section{
+	font:32px/37px 'MyriadPro', Arial, Helvetica, sans-serif;
+	color:#333;
+}
+.section h2 strong,
+.title-section strong{
+	color: #009ddc;
+	font-weight: normal;
+}
+.section h2.blue,
+.title-section.blue{
+	color: #009ddc;
+}
+.b-descr-section{
+	margin: 0 0 10px;
+	font-size: 16px;
+	line-height: 24px;
+}
+.b-descr-section p{
+	margin: 0 0 24px;
 }
 .section .image{
 	display:inline-block;
@@ -1301,8 +1338,8 @@ dl, p, h1, h2, h3, h4, h5, h6, applet, embed, object, frameset {
 	margin:0 0 31px;
 }
 .visual{
-	background:url(images/bg-green-strip.gif) repeat-x;
-	padding:4px 0 0;
+	/* background:url(images/bg-green-strip.gif) repeat-x; */
+	padding:1px 0 0;
 	margin:0 -10px;
 	height:474px;
 	line-height: 24px;
@@ -1665,13 +1702,15 @@ span.wpcf7-form-control-wrap{
 	display:table;
 	height:320px;
 }
-.section-info .image{
+.section-info .image,
+.b-image-dtc{
 	display:table-cell;
 	vertical-align:middle;
 	padding: 0 24px 0 0;
 	width:500px;
 }
-.section-info .image.right{
+.section-info .image.right,
+.b-image-dtc.right{
 	text-align:right;
 	padding:0 0 0 24px;
 }
@@ -1681,7 +1720,8 @@ span.wpcf7-form-control-wrap{
 .section-info .alignright{
 	margin:0 0 0 30px;
 }
-.section-info .text{
+.section-info .text,
+.b-text-dtc{
 	vertical-align:middle;
 	display:table-cell;
 	width:500px;
@@ -1712,6 +1752,14 @@ span.wpcf7-form-control-wrap{
 	color:#333;
 }
 .section-info p{margin:0 0 25px;}
+.descr-section{
+	font-size: 15px;
+	line-height: 24px;
+	padding: 10px 10px 30px;
+}
+.descr-section p{
+	margin: 0;
+}
 .list{
 	padding:0 0 0 10px;
 	margin:0;
@@ -1734,9 +1782,18 @@ span.wpcf7-form-control-wrap{
 	padding:0 0 12px 27px;
 	margin:0 0 0 1%;
 }
+.list.v1{
+	line-height: 24px;
+	font-family:'MyriadPro', Helvetica, sans-serif !important;
+}
+.list.v1 li{
+	padding: 0 0 25px 30px;
+	background-position: 0 3px;
+}
 .blue-heading{
 	background:#009ddc url(images/bg-green-strip.gif) repeat-x;
-	padding:28px 0 23px;
+	/*background:#009ddc url(images/bg-green-strip.gif) repeat-x;*/
+	padding:25px 0 23px;
 	margin:0 -10px;
 }
 
@@ -1745,3 +1802,157 @@ span.wpcf7-form-control-wrap{
 	font:40px/43px 'MyriadPro', Arial, Helvetica, sans-serif;
 	color:#fff;
 }
+.b-steps{
+	position: relative;
+	margin: 0 -25px -20px;
+}
+@media screen and (min-width: 1040px){
+	.b-steps:before{
+		content: '';
+		position: absolute;
+		left: 100px;
+		right: 100px;
+		top: 80px;
+		border-top: 2px solid #aadcf0;
+	}
+}
+.b-step-item *{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.b-step-item{
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	z-index: 5;
+	text-align: left;
+	width: 265px;
+	padding: 0 10px 20px;
+}
+.b-step-item .img{
+	text-align: center;
+	margin: 0 0 27px;
+}
+.b-step-item .image{
+	vertical-align: top;
+}
+.b-step-item .num{
+	float: left;
+	margin: 0 8px 0 0;
+	background: #009ddc;
+	width: 50px;
+	height: 50px;
+	color: #fff;
+	font-size: 20px;
+	line-height: 50px;
+	font-style: normal;
+	text-align: center;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+}
+.b-step-item h4{
+	overflow: hidden;
+	padding: 4px 0 0;
+	margin: 0;
+	clear: none;
+	text-transform: uppercase;
+	font-size: 13px;
+	line-height: 20px;
+	letter-spacing: -0.5px;
+	color: #333;
+	text-transform: uppercase;
+}
+.b-text-subtitle{
+	margin: 0 10px 25px;
+	color: #555;
+	font-size: 18px;
+	line-height: 1.3;
+}
+.b-text-subtitle.v1{
+	margin-bottom: 8px;
+}
+.b-text-subtitle p{
+	margin: 0;
+}
+.b-text-subtitle em{
+	
+}
+.three-columns *{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.three-columns{
+	text-align: center;
+	margin: 0 0 -20px;
+}
+.three-columns .column{
+	display: inline-block;
+	vertical-align: top;
+	width: 33%;
+	min-width: 300px;
+	padding: 0 1% 20px;
+	font-size: 14px;
+	line-height: 24px;
+}
+.three-columns .image{
+	margin: 0 0 15px;
+}
+.three-columns .image img{
+	vertical-align: top;
+}
+.three-columns h4{
+	font: 15px/20px 'MyriadProSemiBold', Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	color: #333;
+	margin: 0 0 8px;
+}
+.three-columns p{
+	margin: 0;
+}
+.b-blocks-holder{
+	margin: 25px -5px 0;
+}
+.b-feature-block{
+	display: inline-block;
+	vertical-align: top;
+	width: 245px;
+	border: 1px solid #dbeaf0;
+	background: #fff;
+	font-size: 15px;
+	line-height: 24px;
+	color: #555;
+	text-align: left;
+	-webkit-box-shadow: 1px 2px 0 1px #cad8de;
+	box-shadow: 1px 2px 0 1px #cad8de;
+}
+.b-blocks-holder .b-feature-block{
+	margin: 0 5px 20px;
+	min-height: 301px;
+}
+.b-feature-block .img{
+	display: block;
+	margin: -1px -1px 0 -1px;
+}
+.b-feature-block .img img{
+	display: block;
+}
+.b-feature-block .content{
+	padding: 14px 5px 24px 17px;
+}
+.b-feature-block h3{
+	margin: 0 0 10px;
+	text-transform: uppercase;
+	color: #333;
+	font: 16px/20px 'MyriadProSemiBold', Arial, Helvetica, sans-serif;
+}
+.b-feature-block p{
+	margin: 0;
+}
+
+
+
+
+
+

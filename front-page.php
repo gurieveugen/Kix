@@ -18,7 +18,7 @@
 			{
 				?>
 				<div class="slide active" style="background-image: url(<?php echo $value->images['full']; ?>);">
-					<img src="<?php echo $value->images['full']; ?>" class="mobile-hide" alt="image description">
+					<img src="<?php echo $value->images['full']; ?>" alt="image description">
 					<div class="text cf">
 						<div class="center-wrap">
 							<div class="holder">
@@ -41,7 +41,6 @@
 			selector: ".slides > .slide",
 			animation: "slide",			
 			slideshow: false,
-			slideshow: true, 
 			controlNav: true,
 			directionNav: false,
 			slideshowSpeed: 5000,
